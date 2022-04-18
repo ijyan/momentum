@@ -10,11 +10,19 @@ function onLoginSubmit(event) {
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
     const userName = loginInput.value;
+
+    // local storage : 브라우저에 뭔가를 저장할 수 있게 해줌
+    // local storage.setItem() : 저장
+    // local storage.getItem() : 불러옴
+    // local storage.removeItem() : 지움
+    localStorage.setItem("userName", userName);
+
     //greeting.innerText = "Hello " + userName;
     greeting.innerText = `Hello ${userName}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 
-    console.log(userName);
+    // local storage : 브라우저에 뭔가를 저장할 수 있게 해줌
+    localStorage.setItem()
 }
 
 // addEventListenr 안에 있는 함수는 직접 실행( ex : handleLinkClick() )하지 않아야한다.
