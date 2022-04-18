@@ -20,9 +20,6 @@ function onLoginSubmit(event) {
     //greeting.innerText = "Hello " + userName;
     greeting.innerText = `Hello ${userName}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
-
-    // local storage : 브라우저에 뭔가를 저장할 수 있게 해줌
-    localStorage.setItem()
 }
 
 // addEventListenr 안에 있는 함수는 직접 실행( ex : handleLinkClick() )하지 않아야한다.
