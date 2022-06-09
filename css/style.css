@@ -1,1 +1,75 @@
-.hidden {display: none;}
+html {font-size: 6.25%;}
+
+body {font-family: 'Montserrat', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;font-size: 16rem;}
+
+.hidden {display: none !important;}
+
+#main {height: 100vh;width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+#main.bg {background-size: cover;background-position: center;background-attachment: fixed;}
+
+/* **************************************** *
+ * LOCAL-INFO
+ * **************************************** */
+.local-info {display: flex; flex-direction: column; align-items: center; color: rgba(0, 0, 0, 0.6);}
+.local-info .weather {}
+.local-info .weather span {}
+
+.local-info .current {padding: 8rem 0 24rem; text-align: center;font-weight: 600;}
+.local-info .current span {display: block;}
+.local-info .current .current__date {font-size: 24rem;margin: 0 0 8rem;}
+.local-info .current .current__clock {font-size: 40rem;}
+
+/* **************************************** *
+ * LOGIN
+ * **************************************** */
+.login {}
+.login .login__form {}
+.login .login__form input {width: 300rem;height: 50rem;border-radius: 45rem 0 0 45rem;text-align: center;color: #444;background-color: var(--white-060);font-size: 14rem;transition: background-color ease-in-out .3s;}
+.login .login__form input:focus {background-color: var(--white-080);}
+.login .login__form .btn-login {width: 100rem;height: 50rem;border-radius: 0 45rem 45rem 0;color: var(--black-060);background-color: var(--white-080);font-weight: 500;transition: background-color ease-in-out .3s, color ease-in-out .3s;}
+.login .login__form .btn-login:hover {background-color: #fff;color: var(--font);}
+.login .login__form .btn-login:active {background-color: #e3e3e3}
+
+.login__greeting {font-weight: 600;display: flex;align-items: center;}
+.login__greeting span {display: block;}
+.login .login__greeting--text {font-size: 24rem;color: var(--black-050);}
+.login .login__greeting--user {font-size: 24rem;color: var(--font);margin: 0 0 0 8rem}
+.login .btn-logout {height: 28rem;padding: 0 8rem;line-height: 28rem;border-radius: 16rem; background-color: var(--white-060);margin: 0 0 0 16rem;color: var(--black-060);font-weight: 600;}
+.login .btn-logout:hover {background-color: var(--white);color: var(--font);transition: background-color ease-in-out .3s, color ease-in-out .3s;}
+
+/* **************************************** *
+ * TODO
+ * **************************************** */
+.todo {padding: 32px 0;animation: fadeUp 1.2s ease-in-out;}
+.todo form {}
+.todo form input {width: 500rem;height: 45rem;border-radius: 25rem;text-align: center;color: #444;background-color: var(--white-060);font-size: 14rem;transition: background-color ease-in-out .3s;padding: 0 24rem}
+.todo form input:focus {background-color: var(--white-080);}
+.todo .todo__list {overflow: auto; height: 24vh;margin: 16rem 0 0; padding: 0 24rem;width: 500rem;}
+.todo .todo__list::-webkit-scrollbar {width: 8rem;background-color: var(--white-040)}
+.todo .todo__list::-webkit-scrollbar-thumb {width: 8rem;background-color: var(--white-080)}
+.todo .todo__list li {position: relative;font-weight: 500;height: 32rem;line-height: 32rem;padding: 0 32rem 0 0}
+.todo .todo__list li span {display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.todo .todo__list li button {background-color: var(--white-060);border-radius: 8rem; padding: 4rem;margin: 0 0 0 8rem;font-size: 11rem;position: absolute;right: 0;top: 4rem;transition: background-color .2s ease-in-out}
+.todo .todo__list li button:hover {background-color: #fff;}
+
+/* **************************************** *
+ * FOOTER
+ * **************************************** */
+#footer {position: absolute;bottom: 0;left: 0;width: 100%;height: 60rem;text-align: center;font-size: 12rem;opacity: 0.5;background-color: rgba(18, 21, 22, 0.9);padding: 8rem 16rem;}
+#footer .quote {color: var(--white);}
+#footer .quote span {display: block;}
+#footer .quote span:first-child {margin: 8rem 0}
+#footer .quote span:last-child {font-style: italic;font-size: 10rem;}
+
+/* **************************************** *
+ * animation
+ * **************************************** */
+
+.ani-fadeup1 {animation: fadeUp .8s ease-in-out}
+.ani-fadeup2 {animation: fadeUp 1s ease-in-out}
+.ani-fadeup3 {animation: fadeUp 1.2s ease-in-out}
+
+@keyframes fadeUp {
+    from {transform: translateY(5em);opacity: 0;}
+    to {transform: translateY(0em);opacity: 1;}
+}
