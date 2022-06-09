@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/variables.css" />
+        <link rel="stylesheet" href="css/style.css" />
 
-    <title>Momentum</title>
-</head>
-<body>
-<h2 class="clock">00:00</h2>
+        <!-- font -->
+        <link
+            rel="stylesheet"
+            as="style"
+            crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-<form class="login-form hidden">
-    <input required maxlength="15" type="text" placeholder="What is your name?" />
-    <button>Log In</button>
-</form>
-
-<h1 class="greeting hidden"></h1>
-
-<form action="" class="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter" required />
-</form>
-
-<ul class="todo-list"></ul>
-
-<div class="quote">
-    <span></span>
-    <span></span>
-</div>
-
-<div class="weather">
-    <span></span>
-    <span></span>
-</div>
-
-<!--script-->
-<script src="js/greetings.js"></script>
-<script src="js/clock.js"></script>
-<script src="js/quotes.js"></script>
-<script src="js/background.js"></script>
-<script src="js/todo.js"></script>
-<script src="js/weather.js"></script>
-</body>
+        <title>Momentum</title>
+    </head>
+    <body>
+        <main id="main">
+            <section class="local-info">
+                <div class="weather">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="current">
+                    <span class="current__date"></span>
+                    <span class="current__clock">00:00</span>
+                </div>
+            </section>
+            <section class="login">
+                <form class="login__form hidden">
+                    <input required maxlength="15" type="text" placeholder="What is your name?" />
+                    <button type="submit" class="btn btn-login">Login</button>
+                </form>
+                <div class="login__greeting hidden">
+                    <span class="login__greeting--text"></span>
+                    <span class="login__greeting--user"></span>
+                    <button class="btn btn-logout">Logout</button>
+                </div>
+            </section>
+            <section class="todo hidden">
+                <form action="" class="todo__form">
+                    <input type="text" placeholder="Write a To Do and Press Enter" required />
+                </form>
+                <ul class="todo__list"></ul>
+            </section>
+        </main>
+        <footer id="footer" class="hidden">
+            <div class="quote">
+                <span></span>
+                <span></span>
+            </div>
+        </footer>
+        <!--script-->
+        <script src="js/greetings.js"></script>
+        <script src="js/clock.js"></script>
+        <script src="js/quotes.js"></script>
+        <script src="js/background.js"></script>
+        <script src="js/todo.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
 </html>
