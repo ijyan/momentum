@@ -1,3 +1,4 @@
+const footer = document.querySelector('footer');
 const quotes = [
     {
         quote: 'The way to get started is to quit talking and begin doing.',
@@ -48,3 +49,15 @@ const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = randomQuote.quote;
 author.innerText = randomQuote.author;
+
+function showQuotes() {
+    footer.classList.remove(HIDDEN_CLASSNAME);
+}
+
+if (savedUsername === null) {
+    footer.classList.add(HIDDEN_CLASSNAME);
+} else {
+    footer.classList.remove(HIDDEN_CLASSNAME);
+}
+
+loginForm.addEventListener('submit', showQuotes);
