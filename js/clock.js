@@ -1,3 +1,4 @@
+const localInfo = document.querySelector('.local-info');
 const currentDate = document.querySelector('.current__date');
 const currentClock = document.querySelector('.current__clock');
 
@@ -11,12 +12,36 @@ function getClock() {
 
 function getDate() {
     const date = new Date();
+    const monthNames = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ];
     const dayName = date.toLocaleString('en-US', { weekday: 'short' });
     const day = String(date.getDate());
-    const month = String(date.getMonth() + 1);
-    currentDate.innerText = `${dayName}. ${month}월 ${day}일 `;
+    const month = monthNames[date.getDate()];
+    currentDate.innerText = `${dayName}. ${day} ${month} `;
 }
 
 getClock();
 getDate();
 setInterval(getClock, 1000);
+
+function activeClass() {
+    localInfo.classList.add('ani-fadeup1');
+}
+
+if (savedUsername !== null) {
+    activeClass();
+}
+
+loginForm.addEventListener('submit', activeClass);
