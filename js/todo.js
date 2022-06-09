@@ -1,6 +1,7 @@
-const toDoForm = document.querySelector('.todo-form');
+const toDoCont = document.querySelector('.todo');
+const toDoForm = document.querySelector('.todo__form');
 const toDoInput = toDoForm.querySelector('input');
-const toDoList = document.querySelector('.todo-list');
+const toDoList = document.querySelector('.todo__list');
 
 const TODOS_KEY = 'todos';
 
@@ -25,7 +26,7 @@ function paintToDo(newToDo) {
     // newTodoObj의 text 대입
     span.innerText = newToDo.text;
     const button = document.createElement('button');
-    button.innerText = '❌';
+    button.innerText = '✔️';
     button.addEventListener('click', deleteToDo);
     list.appendChild(span);
     list.appendChild(button);
@@ -54,3 +55,15 @@ if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+function showTodos() {
+    toDoCont.classList.remove(HIDDEN_CLASSNAME);
+}
+
+if (savedUsername === null) {
+    toDoCont.classList.add(HIDDEN_CLASSNAME);
+} else {
+    toDoCont.classList.remove(HIDDEN_CLASSNAME);
+}
+
+loginForm.addEventListener('submit', showTodos);
