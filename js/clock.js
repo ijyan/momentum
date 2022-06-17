@@ -28,7 +28,7 @@ function getDate() {
     ];
     const dayName = date.toLocaleString('en-US', { weekday: 'short' });
     const day = String(date.getDate());
-    const month = monthNames[date.getDate()];
+    const month = monthNames[date.getMonth() + 1];
     currentDate.innerText = `${dayName}. ${day} ${month} `;
 }
 
