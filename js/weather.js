@@ -1,4 +1,6 @@
 const API_KEY = '3094f59490e5027536d436d0b9f4ed99';
+const city = document.querySelector('.weather span:first-child');
+const weather = document.querySelector('.weather span:last-child');
 
 function onGeoSuccess(position) {
     let lat = position.coords.latitude;
@@ -9,15 +11,13 @@ function onGeoSuccess(position) {
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            const city = document.querySelector('.weather span:first-child');
-            const weather = document.querySelector('.weather span:last-child');
             weather.innerText = `${data.weather[0].main}️`;
             city.innerText = data.name;
         });
 }
 
 function onGeoError() {
-    alert("Can't find you");
+    city.innerText = 'Please allow access to the location.';
 }
 
 //getCurrentPosition(success,error,[options])
