@@ -17,7 +17,7 @@ function onGeoSuccess(position) {
 }
 
 function onGeoError() {
-    city.innerText = 'Please allow access to the location.';
+    city.innerText = 'Please allow access to the location!';
 }
 
 //getCurrentPosition(success,error,[options])
