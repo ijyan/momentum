@@ -6,7 +6,7 @@ const randomImage = images[Math.floor(Math.random() * images.length)];
 function paintImg(randomImage) {
     main.classList.add('bg');
     const bg = document.querySelector('.bg');
-    bg.style.backgroundImage = `url(img/${randomImage})`;
+    bg.style.backgroundImage = `url(./src/img/${randomImage})`;
 }
 
 paintImg(randomImage);
