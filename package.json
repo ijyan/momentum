@@ -1,5 +1,15 @@
 {
   "devDependencies": {
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "homepage": "https://kimkyeonghye.github.io/momentum/",
+  "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "build": "webpack"
   }
 }
