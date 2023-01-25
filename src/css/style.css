@@ -10,7 +10,7 @@ body {font-family: 'Montserrat', Pretendard, -apple-system, BlinkMacSystemFont, 
 /* **************************************** *
  * LOCAL-INFO
  * **************************************** */
-.local-info {display: flex; flex-direction: column; align-items: center; color: rgba(0, 0, 0, 0.6);}
+.local-info {display: flex; flex-direction: column; align-items: center; color: rgba(0, 0, 0, 0.8);}
 .local-info .weather {}
 .local-info .weather span {}
 
@@ -32,25 +32,24 @@ body {font-family: 'Montserrat', Pretendard, -apple-system, BlinkMacSystemFont, 
 
 .login__greeting {font-weight: 600;display: flex;align-items: center;}
 .login__greeting span {display: block;}
-.login .login__greeting--text {font-size: 24rem;color: var(--black-050);}
+.login .login__greeting--text {font-size: 24rem;color: var(--black-060);}
 .login .login__greeting--user {font-size: 24rem;color: var(--font);margin: 0 0 0 8rem}
-.login .btn-logout {height: 28rem;padding: 0 8rem;line-height: 28rem;border-radius: 16rem; background-color: var(--white-060);margin: 0 0 0 16rem;color: var(--black-060);font-weight: 600;}
-.login .btn-logout:hover {background-color: var(--white);color: var(--font);transition: background-color ease-in-out .3s, color ease-in-out .3s;}
+.login .btn-logout {height: 28rem;padding: 0 8rem;line-height: 28rem;border-radius: 16rem; background-color: #f4f6fa;margin: 0 0 0 16rem;color: #5c667b;font-weight: 600;transition: background-color ease-in-out .3s, color ease-in-out .3s;}
+.login .btn-logout:hover {background-color: #d8dce5;}
 
 /* **************************************** *
  * TODO
  * **************************************** */
 .todo {padding: 32px 0;animation: fadeUp 1.2s ease-in-out;}
 .todo form {}
-.todo form input {width: 500rem;height: 45rem;border-radius: 25rem;text-align: center;color: #444;background-color: var(--white-060);font-size: 14rem;transition: background-color ease-in-out .3s;padding: 0 24rem}
-.todo form input:focus {background-color: var(--white-080);}
-.todo .todo__list {overflow: auto; height: 24vh;margin: 16rem 0 0; padding: 0 24rem;width: 500rem;}
+.todo form input {width: 500rem;height: 45rem;border-radius: 25rem;font-weight: 500;text-align: center;color: #373f57;background-color: #fff;font-size: 14rem;transition: background-color ease-in-out .3s;padding: 0 24rem}
+.todo .todo__list {overflow: auto; height: 24vh;margin: 16rem 0 0; padding: 0 24rem;width: 500rem;display: flex;flex-direction: column;gap: 4rem;}
 .todo .todo__list::-webkit-scrollbar {width: 8rem;background-color: var(--white-040)}
 .todo .todo__list::-webkit-scrollbar-thumb {width: 8rem;background-color: var(--white-080)}
-.todo .todo__list li {position: relative;font-weight: 500;height: 32rem;line-height: 32rem;padding: 0 32rem 0 0}
-.todo .todo__list li span {display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
-.todo .todo__list li button {background-color: var(--white-060);border-radius: 8rem; padding: 4rem;margin: 0 0 0 8rem;font-size: 11rem;position: absolute;right: 0;top: 4rem;transition: background-color .2s ease-in-out}
-.todo .todo__list li button:hover {background-color: #fff;}
+.todo .todo__list li {position: relative;font-weight: 500;height: 40rem;line-height: 40rem;padding: 0 12rem;border-radius: 10rem;background-color: var(--white-080);}
+.todo .todo__list li span {display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;color: #373f57;}
+.todo .todo__list li button {background-color: transparent;border-radius: 8rem; padding: 4rem;margin: 0 0 0 8rem;font-size: 11rem;position: absolute;right: 12rem;top: 9rem;transition: background-color .2s ease-in-out}
+.todo .todo__list li button:hover {background-color: #e1dbff;}
 
 /* **************************************** *
  * FOOTER
